@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bookmarks</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+  </head>
+  <body>
+    <h1 class="fs-1 fw-bolder my-5 text-center">bookmarks</h1>
+
+    <div
+      class="container d-flex justify-content-center flex-column align-items-center"
+    >
+      <div class="border-me w-75 my-3"></div>
+
+      <h2>
+        <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+    </div>
+    <div class="container">
+      <div class="mb-3">
+        <label for="bookname" class="form-label"
+          ><i class="fa-solid fa-book-bookmark"></i> site name</label
+        >
+        <input
+          oninput="validName()"
+          type="text"
+          class="form-control"
+          id="bookname"
+          placeholder="bookmarks name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="weburl" class="form-label"
+          ><i class="fa-solid fa-link"></i> Url Name</label
+        >
+        <input
+          oninput="validUrl()"
+          type="url"
+          class="form-control"
+          id="weburl"
+          placeholder="website name"
+        />
+      </div>
+      <div class="d-flex justify-content-center">
+        <button id="addbtn" type="button" class="btn btn-danger btn-lg">
+          submit
+        </button>
+      </div>
+      <div
+        class="d-flex justify-content-center flex-column align-items-center my-4"
+      >
+        <div class="border-me w-75 my-3"></div>
+      </div>
+    </div>
+    <div class="container">
+      <table class="table">
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <div id="validRules" class="d-none ">
+      <div
+      id="validRules"
+      class="layer bg-black opacity-75 d-flex justify-content-center align-items-center"
+    >
+      <div class="validrule container w-50 rounded-4 bg-white">
+        <i  id="close" class="fa-solid fa-xmark d-flex justify-content-end fs-3 m-4"></i>
+        <h3 class="m-2 my-3">
+          Site Name or Url is not valid, Please follow the rules below :
+        </h3>
+        <h4 class="m-2 my-3">Site name must contain at least 3 characters</h4>
+        <h4 class="m-2 my-3">Site URL must be a valid one</h4>
+      </div>
+    </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
